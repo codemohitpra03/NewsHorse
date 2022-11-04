@@ -57,7 +57,7 @@ export class NavBar extends Component {
                 </ul>
                 <div  className="d-flex" >
                 <Button variant="contained" onClick={()=>{ window.location.replace('https://reg-login-using-nodejs-mongodb.herokuapp.com/');}}>
-                  <Link style={{color:"white", textDecoration:"none"}}>LOGIN / SIGNUP</Link> 
+                  <Link to="" style={{color:"white", textDecoration:"none"}}>LOGIN / SIGNUP</Link> 
                 </Button>
                 </div>
                 </div>
