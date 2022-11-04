@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import {  Link } from "react-router-dom";
+import Button from '@mui/material/Button';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 export class NavBar extends Component {
   static propTypes = {};
 
@@ -9,14 +11,14 @@ export class NavBar extends Component {
         <div>
             <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">NewsHorse</Link>
+                <Link className="navbar-brand" to="/NewsHorse">NewsHorse</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                      <Link className="nav-link" aria-current="page" to="/">Home</Link>
+                      <Link className="nav-link" aria-current="page" to="/NewsHorse">Home</Link>
                     </li>
                     {/* 
                     <Route path="/business"><News pageSize={5} country="in" category="business"/></Route>
@@ -53,7 +55,11 @@ export class NavBar extends Component {
                     
 
                 </ul>
-                
+                <div  className="d-flex" >
+                <Button variant="contained" onClick={()=>{ window.location.replace('https://reg-login-using-nodejs-mongodb.herokuapp.com/');}}>
+                  <Link style={{color:"white", textDecoration:"none"}}>LOGIN / SIGNUP</Link> 
+                </Button>
+                </div>
                 </div>
             </div>
             </nav>
